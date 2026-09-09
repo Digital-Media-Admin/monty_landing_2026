@@ -15,8 +15,9 @@ export default function Home() {
     >
       <Hero />
       <ProductMetric />
-      <Product />
       <CaseStudy />
+      <Product />
+
       <Cta />
     </div>
   );

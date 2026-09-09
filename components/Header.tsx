@@ -53,11 +53,11 @@ export function Header() {
             gap: "var(--space-5)",
           }}
         >
-          <a href="#advertise" className="ad-nav-link">
-            Ways to advertise
-          </a>
           <a href="#results" className="ad-nav-link">
             Results
+          </a>
+          <a href="#advertise" className="ad-nav-link">
+            Ways to advertise
           </a>
         </nav>
         <a href="#contact" className="ad-btn ad-btn-md ad-btn-primary">

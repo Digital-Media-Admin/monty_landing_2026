@@ -1,9 +1,12 @@
 import { PlaceholderMedia, StatRow, wrap } from "./shared";
 
 const heroStats = [
-  { value: "22K+", label: "Mailboxes every issue" },
-  { value: "6", label: "Towns covered" },
-  { value: "25+", label: "Years in print" },
+  {
+    value: "$224,185",
+    label: "Median Reader household income",
+  },
+  { value: "60K+", label: "Monthly Online Hits" },
+  { value: "30K+", label: "Monthly Readership" },
 ];
 
 export function Hero() {
@@ -93,7 +96,7 @@ export function Hero() {
             gap: 10,
           }}
         >
-          The Montgomery News · Local advertising{" "}
+          Guaranteed placement in Every Montgomery Mailbox{" "}
           <span aria-hidden="true">↗</span>
         </div>
         <h1
@@ -119,9 +122,8 @@ export function Hero() {
             margin: "22px 0 0",
           }}
         >
-          Put your business in the paper neighbors actually read — mailed free
-          to every home in Belle Mead, Blawenburg, Griggstown, Harlingen, Rocky
-          Hill and Skillman.
+          Get your business seen with our first-class print paper, delivered
+          directly to every home in one of New Jersey's wealthiest towns.
         </p>
         <div style={{ display: "flex", gap: 16, margin: "28px 0 0" }}>
           <a href="#contact" className="ad-btn ad-btn-lg ad-btn-primary">
