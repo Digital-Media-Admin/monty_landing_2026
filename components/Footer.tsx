@@ -59,8 +59,8 @@ export function Footer() {
               maxWidth: 320,
             }}
           >
-            Ad Space is the advertising desk of The Montgomery News — the voice
-            of your community since 2001.
+            Get your business seen with our first-class print paper, delivered
+            directly to every home in one of New Jersey's wealthiest towns.{" "}
           </p>
         </div>
         <div>
@@ -83,9 +83,24 @@ export function Footer() {
               color: "var(--blue-100)",
             }}
           >
-            <span>ads@themontynews.com</span>
-            <span>(908) 555-0100</span>
-            <span>TheMontyNews.com</span>
+            <span>
+              <a href="mailto:Advertising@TheMontyNews.com">
+                Advertising@TheMontyNews.com
+              </a>
+            </span>
+            <span>
+              {" "}
+              <a href="tel:+19088740020">(908)-874-0020</a>
+            </span>
+            <span>
+              <a
+                href="https://www.TheMontyNews.org"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                TheMontyNews.org
+              </a>
+            </span>
           </div>
         </div>
         <div>

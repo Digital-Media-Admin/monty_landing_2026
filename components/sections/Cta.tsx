@@ -1,9 +1,24 @@
+"use client";
+
+import { motion, type Variants } from "motion/react";
 import { ContactForm } from "@/components/ContactForm";
 import { wrap } from "./shared";
 
+const containerVariants: Variants = {
+  hidden: {},
+  visible: {
+    transition: { staggerChildren: 0.15, delayChildren: 0.1 },
+  },
+};
+
+const itemVariants: Variants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeOut" } },
+};
+
 export function Cta() {
   return (
-    <section
+    <motion.section
       id="contact"
       style={{
         ...wrap,
@@ -13,9 +28,14 @@ export function Cta() {
         gap: "var(--space-8)",
         alignItems: "center",
       }}
+      variants={containerVariants}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.2 }}
     >
       <div>
-        <div
+        <motion.div
+          variants={itemVariants}
           style={{
             fontSize: "var(--text-label)",
             fontWeight: 700,
@@ -24,9 +44,10 @@ export function Cta() {
             color: "var(--brand)",
           }}
         >
-          Book a call
-        </div>
-        <h2
+          Connect with us
+        </motion.div>
+        <motion.h2
+          variants={itemVariants}
           id="rates"
           style={{
             fontFamily: "var(--font-display)",
@@ -37,15 +58,26 @@ export function Cta() {
             lineHeight: "var(--leading-display)",
           }}
         >
-          Fifteen minutes,
-          <br />a rate card, no pressure
-        </h2>
-        <p style={{ fontSize: "var(--text-body-md)", color: "var(--text-muted)", maxWidth: 400, margin: "18px 0 0" }}>
-          Tell us what you sell and who you want to reach. We&rsquo;ll walk you through sizes, rates and the next
-          issue&rsquo;s deadline.
-        </p>
+          Get Your Brand
+          <br />
+          Seen Where it Counts
+        </motion.h2>
+        <motion.p
+          variants={itemVariants}
+          style={{
+            fontSize: "var(--text-body-md)",
+            color: "var(--text-muted)",
+            maxWidth: 400,
+            margin: "18px 0 0",
+          }}
+        >
+          We&apos;ll walk you through options, sizes, and rates and discuss
+          how we can work together to reach your audience.
+        </motion.p>
       </div>
-      <ContactForm />
-    </section>
+      <motion.div variants={itemVariants}>
+        <ContactForm />
+      </motion.div>
+    </motion.section>
   );
 }

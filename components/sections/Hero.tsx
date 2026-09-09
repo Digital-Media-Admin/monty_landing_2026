@@ -1,3 +1,6 @@
+"use client";
+
+import { motion, type Variants } from "motion/react";
 import { PlaceholderMedia, StatRow, wrap } from "./shared";
 
 const heroStats = [
@@ -8,6 +11,18 @@ const heroStats = [
   { value: "60K+", label: "Monthly Online Hits" },
   { value: "30K+", label: "Monthly Readership" },
 ];
+
+const containerVariants: Variants = {
+  hidden: {},
+  visible: {
+    transition: { staggerChildren: 0.15, delayChildren: 0.1 },
+  },
+};
+
+const itemVariants: Variants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeOut" } },
+};
 
 export function Hero() {
   return (
@@ -77,14 +92,19 @@ export function Hero() {
           label="The Montgomery News front page"
         />
       </div>
-      <div
+      <motion.div
         style={{
           ...wrap,
           padding: "88px var(--space-5) 96px",
           position: "relative",
         }}
+        variants={containerVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.2 }}
       >
-        <div
+        <motion.div
+          variants={itemVariants}
           style={{
             fontSize: "var(--text-label)",
             fontWeight: 700,
@@ -98,8 +118,9 @@ export function Hero() {
         >
           Guaranteed placement in Every Montgomery Mailbox{" "}
           <span aria-hidden="true">↗</span>
-        </div>
-        <h1
+        </motion.div>
+        <motion.h1
+          variants={itemVariants}
           style={{
             fontFamily: "var(--font-display)",
             fontSize: "var(--text-display-xl)",
@@ -113,8 +134,9 @@ export function Hero() {
           Every mailbox.
           <br />
           <span style={{ color: "var(--ink)" }}>Every month.</span>
-        </h1>
-        <p
+        </motion.h1>
+        <motion.p
+          variants={itemVariants}
           style={{
             fontSize: "var(--text-body-lg)",
             color: "var(--text-body)",
@@ -124,14 +146,19 @@ export function Hero() {
         >
           Get your business seen with our first-class print paper, delivered
           directly to every home in one of New Jersey's wealthiest towns.
-        </p>
-        <div style={{ display: "flex", gap: 16, margin: "28px 0 0" }}>
+        </motion.p>
+        <motion.div
+          variants={itemVariants}
+          style={{ display: "flex", gap: 16, margin: "28px 0 0" }}
+        >
           <a href="#contact" className="ad-btn ad-btn-lg ad-btn-primary">
             Book a call <span aria-hidden="true">→</span>
           </a>
-        </div>
-        <StatRow items={heroStats} style={{ marginTop: 56 }} />
-      </div>
+        </motion.div>
+        <motion.div variants={itemVariants} style={{ marginTop: 56 }}>
+          <StatRow items={heroStats} />
+        </motion.div>
+      </motion.div>
     </section>
   );
 }
