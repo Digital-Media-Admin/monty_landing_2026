@@ -1,20 +1,35 @@
 import { Marquee } from "@/components/ui/marquee";
 const logos = [
-  { src: "/logos/1.png", alt: "Logo 1" },
-  { src: "/logos/2.png", alt: "Logo 2" },
-  { src: "/logos/3.png", alt: "Logo 3" },
-  { src: "/logos/4.png", alt: "Logo 4" },
-  { src: "/logos/5.png", alt: "Logo 5" },
+  {
+    src: "https://t4.ftcdn.net/jpg/06/96/89/13/360_F_696891328_utj80ZwXsdy8SloC9IBaFGDIcGNBrEze.jpg",
+    alt: "Logo 1",
+  },
+  {
+    src: "https://t4.ftcdn.net/jpg/06/96/89/13/360_F_696891328_utj80ZwXsdy8SloC9IBaFGDIcGNBrEze.jpg",
+    alt: "Logo 2",
+  },
+  {
+    src: "https://t4.ftcdn.net/jpg/06/96/89/13/360_F_696891328_utj80ZwXsdy8SloC9IBaFGDIcGNBrEze.jpg",
+    alt: "Logo 3",
+  },
+  {
+    src: "https://t4.ftcdn.net/jpg/06/96/89/13/360_F_696891328_utj80ZwXsdy8SloC9IBaFGDIcGNBrEze.jpg",
+    alt: "Logo 4",
+  },
+  {
+    src: "https://t4.ftcdn.net/jpg/06/96/89/13/360_F_696891328_utj80ZwXsdy8SloC9IBaFGDIcGNBrEze.jpg",
+    alt: "Logo 5",
+  },
 ];
 export default function ClientTicker() {
   return (
-    <Marquee pauseOnHover className="[--duration:25s]">
+    <Marquee className="[--duration:40s]">
       {logos.map((logo) => (
         <img
           key={logo.src}
           src={logo.src}
           alt={logo.alt}
-          className="mx-8 h-10 w-auto object-contain"
+          className="mx-8 h-16 w-auto object-contain"
         />
       ))}
     </Marquee>
