@@ -6,11 +6,18 @@ import { Cta } from "@/components/sections/Cta";
 
 export default function Home() {
   return (
-    <div style={{ minWidth: 1280, fontFamily: "var(--font-body)", color: "var(--text-body)" }}>
+    <div
+      style={{
+        minWidth: 1280,
+        fontFamily: "var(--font-body)",
+        color: "var(--text-body)",
+      }}
+    >
       <Hero />
       <ProductMetric />
       <Product />
       <CaseStudy />
+      <p>test</p>
       <Cta />
     </div>
   );
