@@ -17,7 +17,6 @@ export default function Home() {
       <ProductMetric />
       <Product />
       <CaseStudy />
-      <p>test</p>
       <Cta />
     </div>
   );
