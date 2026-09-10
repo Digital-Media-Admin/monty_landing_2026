@@ -1,5 +1,4 @@
 "use client";
-import ClientTicker from "./ClientTicker";
 import { motion, type Variants } from "motion/react";
 import { PlaceholderMedia, StatRow, wrap } from "./shared";
 
@@ -33,64 +32,49 @@ export function Hero() {
         overflow: "hidden",
       }}
     >
-      <div
-        aria-hidden="true"
-        style={{
-          position: "absolute",
-          right: 96,
-          top: 48,
-          width: 360,
-          height: 360,
-          borderRadius: "50%",
-          background: "var(--blue-700)",
-          opacity: 0.92,
-        }}
-      />
-      <div
-        aria-hidden="true"
-        style={{
-          position: "absolute",
-          right: 400,
-          bottom: -70,
-          width: 220,
-          height: 220,
-          borderRadius: "50%",
-          background: "var(--blue-200)",
-        }}
-      />
-      <div
-        aria-hidden="true"
-        style={{
-          position: "absolute",
-          left: "47%",
-          top: 44,
-          display: "grid",
-          gridTemplateColumns: "repeat(5, 5px)",
-          gap: 8,
-        }}
-      >
-        {Array.from({ length: 20 }).map((_, i) => (
-          <span
-            key={i}
-            style={{ width: 5, height: 5, background: "var(--blue-700)" }}
-          />
-        ))}
-      </div>
-      <div
-        style={{
-          position: "absolute",
-          right: 150,
-          top: 84,
-          width: 300,
-          aspectRatio: "3/4",
-          boxShadow: "var(--shadow-pop)",
-          transform: "rotate(3deg)",
-        }}
-      >
-        <PlaceholderMedia
-          gradient="linear-gradient(135deg,var(--ink),var(--blue-700))"
-          label="The Montgomery News front page"
+      <div className="hidden md:block">
+        <div
+          aria-hidden="true"
+          style={{
+            position: "absolute",
+            right: "calc((100% - var(--container-max)) / 2 + 65px)",
+            top: 48,
+            width: 360,
+            height: 360,
+            borderRadius: "50%",
+            background: "var(--blue-700)",
+            opacity: 0.92,
+          }}
         />
+        <div
+          aria-hidden="true"
+          style={{
+            position: "absolute",
+            right: "calc((100% - var(--container-max)) / 2 + 400px)",
+            bottom: -70,
+            width: 220,
+            height: 220,
+            borderRadius: "50%",
+            background: "var(--blue-200)",
+          }}
+        />
+
+        <div
+          style={{
+            position: "absolute",
+            right: "calc((100% - var(--container-max)) / 2 + 110px)",
+            top: 84,
+            width: 300,
+            aspectRatio: "3/4",
+            boxShadow: "var(--shadow-pop)",
+            transform: "rotate(3deg)",
+          }}
+        >
+          <PlaceholderMedia
+            gradient="linear-gradient(135deg,var(--ink),var(--blue-700))"
+            label="The Montgomery News front page"
+          />
+        </div>
       </div>
       <motion.div
         style={{
@@ -159,8 +143,6 @@ export function Hero() {
           <StatRow items={heroStats} />
         </motion.div>
       </motion.div>
-
-      <ClientTicker />
     </section>
   );
 }

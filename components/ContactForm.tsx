@@ -84,7 +84,7 @@ export function ContactForm() {
             <input
               className="ad-field"
               type="text"
-              placeholder="Rocky Hill Bistro"
+              placeholder="Your Business Name"
               required
             />
           </label>
@@ -100,7 +100,7 @@ export function ContactForm() {
                 marginBottom: "var(--space-2)",
               }}
             >
-              Phone or email
+              Phone Number
             </span>
             <input
               className="ad-field"
