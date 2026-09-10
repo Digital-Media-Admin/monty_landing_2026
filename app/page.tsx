@@ -8,13 +8,11 @@ export default function Home() {
   return (
     <div
       style={{
-        minWidth: 1280,
         fontFamily: "var(--font-body)",
         color: "var(--text-body)",
       }}
     >
       <Hero />
-
       <CaseStudy />
       <ClientTicker />
       <Product />

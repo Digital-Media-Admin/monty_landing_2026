@@ -25,12 +25,11 @@ export function Footer() {
         }}
       />
       <div
+        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-[1.2fr_1fr_auto]"
         style={{
           maxWidth: "var(--container-max)",
           margin: "0 auto",
           padding: "var(--space-8) var(--space-5)",
-          display: "grid",
-          gridTemplateColumns: "1.2fr 1fr auto",
           gap: "var(--space-7)",
           position: "relative",
         }}
@@ -60,7 +59,8 @@ export function Footer() {
             }}
           >
             Get your business seen with our first-class print paper, delivered
-            directly to every home in one of New Jersey's wealthiest towns.{" "}
+            directly to every home in one of New Jersey&rsquo;s wealthiest
+            towns.{" "}
           </p>
         </div>
         <div>

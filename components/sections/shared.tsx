@@ -62,6 +62,7 @@ export function SectionHeader({
         display: "flex",
         alignItems: "center",
         justifyContent: center ? "center" : undefined,
+        flexWrap: "wrap",
         gap: "var(--space-4)",
         fontFamily: "var(--font-body)",
       }}
@@ -74,7 +75,7 @@ export function SectionHeader({
           textTransform: "uppercase",
           letterSpacing: "0.02em",
           color,
-          whiteSpace: "nowrap",
+          textAlign: center ? "center" : undefined,
           margin: 0,
         }}
       >
@@ -83,6 +84,7 @@ export function SectionHeader({
       {!center && (
         <span
           aria-hidden="true"
+          className="hidden sm:block"
           style={{
             flex: 1,
             height: 1,
@@ -161,12 +163,8 @@ export function StatRow({
 }) {
   return (
     <div
-      style={{
-        display: "flex",
-        alignItems: "stretch",
-        gap: "var(--space-6)",
-        ...style,
-      }}
+      className="grid grid-cols-2 gap-x-6 gap-y-5 sm:grid-cols-3 lg:flex lg:gap-6"
+      style={{ alignItems: "stretch", ...style }}
     >
       {items.map((it, i) => (
         <div
@@ -180,6 +178,7 @@ export function StatRow({
           {i > 0 && (
             <span
               aria-hidden="true"
+              className="hidden lg:block"
               style={{
                 width: 1,
                 background: inverse

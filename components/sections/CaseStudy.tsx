@@ -25,7 +25,14 @@ const itemVariants: Variants = {
 
 export function CaseStudy() {
   return (
-    <section id="results" style={{ background: "var(--surface-inverse)", position: "relative", overflow: "hidden" }}>
+    <section
+      id="results"
+      style={{
+        background: "var(--surface-inverse)",
+        position: "relative",
+        overflow: "hidden",
+      }}
+    >
       <div
         aria-hidden="true"
         style={{
@@ -40,7 +47,11 @@ export function CaseStudy() {
         }}
       />
       <motion.div
-        style={{ ...wrap, padding: "var(--space-8) var(--space-5)", position: "relative" }}
+        style={{
+          ...wrap,
+          padding: "var(--space-8) var(--space-5)",
+          position: "relative",
+        }}
         variants={containerVariants}
         initial="hidden"
         whileInView="visible"
@@ -49,11 +60,22 @@ export function CaseStudy() {
         <motion.div variants={itemVariants}>
           <SectionHeader title="What advertisers say" inverse />
         </motion.div>
-        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "var(--space-7)", marginTop: "var(--space-6)" }}>
+        <div
+          className="grid grid-cols-1 md:grid-cols-2"
+          style={{ gap: "var(--space-7)", marginTop: "var(--space-6)" }}
+        >
           <motion.figure variants={itemVariants} style={{ margin: 0 }}>
-            <blockquote style={{ margin: 0, fontSize: 22, fontWeight: 600, lineHeight: 1.4, color: "var(--white)" }}>
-              “The sedation voucher on our back-page ad brought in 40 new patients in one season. Nothing else we
-              run comes close.”
+            <blockquote
+              style={{
+                margin: 0,
+                fontSize: "var(--text-body-lg)",
+                fontWeight: 600,
+                lineHeight: 1.4,
+                color: "var(--white)",
+              }}
+            >
+              “The sedation voucher on our back-page ad brought in 40 new
+              patients in one season. Nothing else we run comes close.”
             </blockquote>
             <figcaption
               style={{
@@ -69,9 +91,17 @@ export function CaseStudy() {
             </figcaption>
           </motion.figure>
           <motion.figure variants={itemVariants} style={{ margin: 0 }}>
-            <blockquote style={{ margin: 0, fontSize: 22, fontWeight: 600, lineHeight: 1.4, color: "var(--white)" }}>
-              “We booked out our summer camp two months early. Everyone in town mentions they saw us in the
-              Monty.”
+            <blockquote
+              style={{
+                margin: 0,
+                fontSize: "var(--text-body-lg)",
+                fontWeight: 600,
+                lineHeight: 1.4,
+                color: "var(--white)",
+              }}
+            >
+              “We booked out our summer camp two months early. Everyone in town
+              mentions they saw us in the Monty.”
             </blockquote>
             <figcaption
               style={{
@@ -93,8 +123,6 @@ export function CaseStudy() {
             borderTop: "1px solid rgba(255,255,255,0.2)",
             marginTop: "var(--space-7)",
             paddingTop: "var(--space-6)",
-            display: "flex",
-            gap: "var(--space-8)",
           }}
         >
           <StatRow items={resultStats} inverse />

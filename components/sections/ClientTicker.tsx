@@ -2,7 +2,7 @@
 
 import { motion } from "motion/react";
 import { Marquee } from "@/components/ui/marquee";
-import { SectionHeader, wrap } from "./shared";
+import { SectionHeader } from "./shared";
 const logos = [
   {
     src: "https://fcmitvaaoqpj9xtr.public.blob.vercel-storage.com/logo%20%280%29.png",
@@ -47,7 +47,7 @@ export default function ClientTicker() {
       viewport={{ once: true, amount: 0.2 }}
       transition={{ duration: 0.9, ease: "easeOut" }}
     >
-      <div>
+      <div className="px-4">
         <SectionHeader
           title=" Align your brand with names your clients trust"
           accent
@@ -61,7 +61,7 @@ export default function ClientTicker() {
             key={logo.src}
             src={logo.src}
             alt={logo.alt}
-            className="mx-8 h-30 py-4 w-auto object-contain"
+            className="mx-6 h-16 w-auto object-contain py-4 sm:mx-8 md:h-24 lg:h-28"
           />
         ))}
       </Marquee>

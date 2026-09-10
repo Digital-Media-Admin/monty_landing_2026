@@ -87,11 +87,13 @@ const circleBackVariants: Variants = {
 };
 
 // Shared box for the cover graphic and the two static papers stacked behind it.
+// Only shown at lg+; width/right scale so it clears the headline on laptops and
+// aligns to the 1200px content column on wide screens.
 const paperBase: React.CSSProperties = {
   position: "absolute",
-  right: "calc((100% - var(--container-max)) / 2 + 50px)",
+  right: "calc(max(0px, (100% - var(--container-max)) / 2) + var(--space-6))",
   top: 84,
-  width: 380,
+  width: "clamp(300px, 26vw, 380px)",
   aspectRatio: "920 / 1360",
   boxShadow: "var(--shadow-pop)",
   borderRadius: 2,
@@ -119,7 +121,7 @@ export function Hero() {
       }}
     >
       <motion.div
-        className="hidden md:block"
+        className="hidden lg:block"
         variants={decorContainerVariants}
         initial="hidden"
         animate="visible"
@@ -219,7 +221,7 @@ export function Hero() {
       <motion.div
         style={{
           ...wrap,
-          padding: "88px var(--space-5) 96px",
+          padding: "var(--space-9) var(--space-5)",
           position: "relative",
         }}
         variants={containerVariants}
@@ -237,6 +239,7 @@ export function Hero() {
             color: "var(--brand)",
             display: "flex",
             alignItems: "center",
+            flexWrap: "wrap",
             gap: 10,
           }}
         >
@@ -269,7 +272,7 @@ export function Hero() {
           }}
         >
           Get your business seen with our first-class print paper, delivered
-          directly to every home in one of New Jersey's wealthiest towns.
+          directly to every home in one of New Jersey&rsquo;s wealthiest towns.
         </motion.p>
         <motion.div
           variants={itemVariants}

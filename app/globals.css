@@ -53,19 +53,19 @@
   --border-default: var(--gray-200);
   --border-strong: var(--ink);
 
-  /* Typography */
+  /* Typography — display/heading sizes scale fluidly with the viewport */
   --font-display: var(--font-anton), Impact, sans-serif;
   --font-body: var(--font-archivo), Helvetica, Arial, sans-serif;
-  --text-display-xl: 88px;
-  --text-display: 64px;
-  --text-display-sm: 44px;
+  --text-display-xl: clamp(2.5rem, 1rem + 6.5vw, 88px);
+  --text-display: clamp(2.25rem, 1.25rem + 4vw, 64px);
+  --text-display-sm: clamp(1.75rem, 1.1rem + 2.6vw, 44px);
   --leading-display: 0.96;
   --tracking-display: 0.01em;
-  --text-h1: 36px;
-  --text-h2: 26px;
+  --text-h1: clamp(1.75rem, 1.2rem + 1.8vw, 36px);
+  --text-h2: clamp(1.375rem, 1.1rem + 0.9vw, 26px);
   --text-h3: 19px;
   --leading-heading: 1.15;
-  --text-body-lg: 18px;
+  --text-body-lg: clamp(1rem, 0.9rem + 0.4vw, 18px);
   --text-body-md: 15px;
   --text-body-sm: 13px;
   --leading-body: 1.55;
@@ -93,7 +93,8 @@
   --section-pad-y: var(--space-9);
 
   /* Effects */
-  --shadow-card: 0 1px 2px rgba(15, 23, 48, 0.06), 0 4px 16px rgba(15, 23, 48, 0.06);
+  --shadow-card:
+    0 1px 2px rgba(15, 23, 48, 0.06), 0 4px 16px rgba(15, 23, 48, 0.06);
   --shadow-pop: 0 8px 32px rgba(15, 23, 48, 0.14);
   --rule-hairline: 1px solid var(--border-default);
   --rule-heavy: 2px solid var(--border-strong);
@@ -135,10 +136,29 @@
   --sidebar-ring: oklch(0.708 0 0);
 }
 
+/* Responsive spacing: tighten the heavy tokens as the viewport narrows.
+   Every section consumes these, so this cascades site-wide. */
+@media (max-width: 1023px) {
+  :root {
+    --header-h: 64px;
+    --space-9: 56px;
+  }
+}
+@media (max-width: 767px) {
+  :root {
+    --header-h: 58px;
+    --space-8: 40px;
+    --space-9: 44px;
+    --space-7: 28px;
+    --space-5: 16px;
+  }
+}
+
 body {
   margin: 0;
   font-family: var(--font-body);
   font-size: var(--text-body-md);
+  overflow-x: hidden;
   line-height: var(--leading-body);
   color: var(--text-body);
   background: var(--surface-page);
@@ -198,6 +218,16 @@ h4 {
 .ad-btn-md {
   padding: 12px 24px;
   font-size: 13px;
+}
+@media (max-width: 767px) {
+  .ad-btn-lg {
+    padding: 13px 20px;
+    font-size: 13px;
+  }
+  .ad-btn-md {
+    padding: 9px 13px;
+    font-size: 12px;
+  }
 }
 .ad-btn-primary {
   background: var(--brand);
@@ -330,19 +360,19 @@ h4 {
   --radius-3xl: calc(var(--radius) * 2.2);
   --radius-4xl: calc(var(--radius) * 2.6);
   @keyframes marquee {
-  from {
-    transform: translateX(0);
+    from {
+      transform: translateX(0);
     }
-  to {
-    transform: translateX(calc(-100% - var(--gap)));
+    to {
+      transform: translateX(calc(-100% - var(--gap)));
     }
   }
   @keyframes marquee-vertical {
-  from {
-    transform: translateY(0);
+    from {
+      transform: translateY(0);
     }
-  to {
-    transform: translateY(calc(-100% - var(--gap)));
+    to {
+      transform: translateY(calc(-100% - var(--gap)));
     }
   }
 }

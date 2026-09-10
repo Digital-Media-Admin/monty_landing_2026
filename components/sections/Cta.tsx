@@ -20,13 +20,10 @@ export function Cta() {
   return (
     <motion.section
       id="contact"
+      className="grid grid-cols-1 items-start gap-10 md:grid-cols-[1.1fr_1fr] md:items-center"
       style={{
         ...wrap,
         padding: "var(--space-8) var(--space-5)",
-        display: "grid",
-        gridTemplateColumns: "1.1fr 1fr",
-        gap: "var(--space-8)",
-        alignItems: "center",
       }}
       variants={containerVariants}
       initial="hidden"

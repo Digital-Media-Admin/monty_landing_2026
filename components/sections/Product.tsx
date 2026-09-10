@@ -33,9 +33,8 @@ export function Product() {
           />
         </motion.div>
         <div
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3"
           style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(3, 1fr)",
             gap: "var(--space-5)",
             marginTop: "var(--space-6)",
           }}
@@ -56,7 +55,7 @@ export function Product() {
                 />
               }
             >
-              From an eighth-page to the back cover, designed by our teamat no
+              From an eighth-page to the back cover, designed by our team at no
               extra cost.
             </AdCard>
           </motion.div>
