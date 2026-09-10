@@ -1,5 +1,5 @@
 "use client";
-
+import ClientTicker from "./ClientTicker";
 import { motion, type Variants } from "motion/react";
 import { PlaceholderMedia, StatRow, wrap } from "./shared";
 
@@ -116,7 +116,7 @@ export function Hero() {
             gap: 10,
           }}
         >
-          Guaranteed placement in Every Montgomery Mailbox{" "}
+          Placement in Every Montgomery Mailbox{" "}
           <span aria-hidden="true">↗</span>
         </motion.div>
         <motion.h1
@@ -159,6 +159,8 @@ export function Hero() {
           <StatRow items={heroStats} />
         </motion.div>
       </motion.div>
+
+      <ClientTicker />
     </section>
   );
 }

@@ -1,37 +1,60 @@
+"use client";
+
+import { motion } from "motion/react";
 import { Marquee } from "@/components/ui/marquee";
 const logos = [
   {
-    src: "https://t4.ftcdn.net/jpg/06/96/89/13/360_F_696891328_utj80ZwXsdy8SloC9IBaFGDIcGNBrEze.jpg",
+    src: "https://fcmitvaaoqpj9xtr.public.blob.vercel-storage.com/logo%20%280%29.png",
+    alt: "Logo 0",
+  },
+  {
+    src: "https://fcmitvaaoqpj9xtr.public.blob.vercel-storage.com/logo%20%281%29.png",
     alt: "Logo 1",
   },
   {
-    src: "https://t4.ftcdn.net/jpg/06/96/89/13/360_F_696891328_utj80ZwXsdy8SloC9IBaFGDIcGNBrEze.jpg",
-    alt: "Logo 2",
+    src: "https://fcmitvaaoqpj9xtr.public.blob.vercel-storage.com/Hackensack_Meridian_Carrier_Clinic_transparent.png",
+    alt: "Hackensack Meridian Carrier Clinic",
   },
   {
-    src: "https://t4.ftcdn.net/jpg/06/96/89/13/360_F_696891328_utj80ZwXsdy8SloC9IBaFGDIcGNBrEze.jpg",
-    alt: "Logo 3",
+    src: "https://fcmitvaaoqpj9xtr.public.blob.vercel-storage.com/Callaway_Henderson_Sothebys_transparent.png",
+    alt: "Callaway Henderson Sotheby's International Realty",
   },
   {
-    src: "https://t4.ftcdn.net/jpg/06/96/89/13/360_F_696891328_utj80ZwXsdy8SloC9IBaFGDIcGNBrEze.jpg",
-    alt: "Logo 4",
+    src: "https://fcmitvaaoqpj9xtr.public.blob.vercel-storage.com/YingHua_transparent.png",
+    alt: "YingHua International School",
+  },
+
+  {
+    src: "https://fcmitvaaoqpj9xtr.public.blob.vercel-storage.com/logo%20%286%29.png",
+    alt: "Logo 6",
   },
   {
-    src: "https://t4.ftcdn.net/jpg/06/96/89/13/360_F_696891328_utj80ZwXsdy8SloC9IBaFGDIcGNBrEze.jpg",
-    alt: "Logo 5",
+    src: "https://fcmitvaaoqpj9xtr.public.blob.vercel-storage.com/logo%20%287%29.png",
+    alt: "Logo 7",
+  },
+  {
+    src: "https://fcmitvaaoqpj9xtr.public.blob.vercel-storage.com/logo%20%288%29.png",
+    alt: "Logo 8",
   },
 ];
 export default function ClientTicker() {
   return (
-    <Marquee className="[--duration:40s]">
-      {logos.map((logo) => (
-        <img
-          key={logo.src}
-          src={logo.src}
-          alt={logo.alt}
-          className="mx-8 h-16 w-auto object-contain"
-        />
-      ))}
-    </Marquee>
+    <motion.div
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      viewport={{ once: true, amount: 0.2 }}
+      transition={{ duration: 0.9, ease: "easeOut" }}
+    >
+      <Marquee className="[--duration:100s]">
+        {logos.map((logo) => (
+          <img
+            key={logo.src}
+            src={logo.src}
+            alt={logo.alt}
+            className="mx-8 h-32 py-4 w-auto object-contain"
+          />
+        ))}
+      </Marquee>
+    </motion.div>
   );
 }

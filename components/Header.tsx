@@ -10,12 +10,15 @@ export function Header() {
       style={{
         background: "var(--surface-page)",
         borderBottom: "var(--rule-hairline)",
+        height: "var(--header-h)",
+        display: "flex",
+        alignItems: "center",
       }}
     >
       <div
         style={{
           ...wrap,
-          padding: "18px var(--space-5)",
+          width: "100%",
           display: "flex",
           alignItems: "center",
           gap: "var(--space-6)",

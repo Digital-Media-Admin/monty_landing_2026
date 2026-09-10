@@ -73,6 +73,9 @@
   --text-label-sm: 11px;
   --tracking-label: 0.09em;
 
+  /* Layout */
+  --header-h: 76px;
+
   /* Spacing */
   --space-1: 4px;
   --space-2: 8px;
