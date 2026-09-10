@@ -37,7 +37,7 @@ export function Hero() {
           aria-hidden="true"
           style={{
             position: "absolute",
-            right: "calc((100% - var(--container-max)) / 2 + 65px)",
+            right: "calc((100% - var(--container-max)) / 2)",
             top: 48,
             width: 360,
             height: 360,
@@ -46,7 +46,8 @@ export function Hero() {
             opacity: 0.92,
           }}
         />
-        <div
+
+        {/* <div
           aria-hidden="true"
           style={{
             position: "absolute",
@@ -57,12 +58,12 @@ export function Hero() {
             borderRadius: "50%",
             background: "var(--blue-200)",
           }}
-        />
+        /> */}
 
         <div
           style={{
             position: "absolute",
-            right: "calc((100% - var(--container-max)) / 2 + 110px)",
+            right: "calc((100% - var(--container-max)) / 2 + 50px)",
             top: 84,
             width: 300,
             aspectRatio: "3/4",
