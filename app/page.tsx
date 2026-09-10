@@ -15,8 +15,8 @@ export default function Home() {
     >
       <Hero />
 
-      <ClientTicker />
       <CaseStudy />
+      <ClientTicker />
       <Product />
       <Cta />
     </div>

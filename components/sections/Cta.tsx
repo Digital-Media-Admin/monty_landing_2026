@@ -42,6 +42,9 @@ export function Cta() {
             letterSpacing: "var(--tracking-label)",
             textTransform: "uppercase",
             color: "var(--brand)",
+            display: "flex",
+            alignItems: "center",
+            gap: 10,
           }}
         >
           Connect with us
@@ -65,14 +68,14 @@ export function Cta() {
         <motion.p
           variants={itemVariants}
           style={{
-            fontSize: "var(--text-body-md)",
+            fontSize: "var(--text-body-lg)",
             color: "var(--text-muted)",
             maxWidth: 400,
             margin: "18px 0 0",
           }}
         >
-          We&apos;ll walk you through options, sizes, and rates and discuss
-          how we can work together to reach your audience.
+          We&apos;ll walk you through options, sizes, and rates and discuss how
+          we can work together to reach your audience.
         </motion.p>
       </div>
       <motion.div variants={itemVariants}>

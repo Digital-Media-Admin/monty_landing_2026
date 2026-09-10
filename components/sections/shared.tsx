@@ -39,18 +39,29 @@ export function SectionHeader({
   action,
   actionHref,
   inverse = false,
+  accent = false,
+  small = false,
+  center = false,
 }: {
   title: string;
   action?: string;
   actionHref?: string;
   inverse?: boolean;
+  accent?: boolean;
+  small?: boolean;
+  center?: boolean;
 }) {
-  const color = inverse ? "var(--white)" : "var(--text-heading)";
+  const color = inverse
+    ? "var(--white)"
+    : accent
+      ? "var(--brand)"
+      : "var(--text-heading)";
   return (
     <div
       style={{
         display: "flex",
         alignItems: "center",
+        justifyContent: center ? "center" : undefined,
         gap: "var(--space-4)",
         fontFamily: "var(--font-body)",
       }}
@@ -59,7 +70,7 @@ export function SectionHeader({
         style={{
           fontFamily: "var(--font-body)",
           fontWeight: 900,
-          fontSize: "var(--text-h2)",
+          fontSize: small ? "var(--text-h3)" : "var(--text-h2)",
           textTransform: "uppercase",
           letterSpacing: "0.02em",
           color,
@@ -69,14 +80,18 @@ export function SectionHeader({
       >
         {title}
       </h2>
-      <span
-        aria-hidden="true"
-        style={{
-          flex: 1,
-          height: 1,
-          background: inverse ? "rgba(255,255,255,0.35)" : "var(--border-strong)",
-        }}
-      />
+      {!center && (
+        <span
+          aria-hidden="true"
+          style={{
+            flex: 1,
+            height: 1,
+            background: inverse
+              ? "rgba(255,255,255,0.35)"
+              : "var(--border-strong)",
+          }}
+        />
+      )}
       {action && (
         <a
           href={actionHref}
@@ -145,15 +160,31 @@ export function StatRow({
   style?: React.CSSProperties;
 }) {
   return (
-    <div style={{ display: "flex", alignItems: "stretch", gap: "var(--space-6)", ...style }}>
+    <div
+      style={{
+        display: "flex",
+        alignItems: "stretch",
+        gap: "var(--space-6)",
+        ...style,
+      }}
+    >
       {items.map((it, i) => (
-        <div key={it.label} style={{ display: "flex", alignItems: "stretch", gap: "var(--space-6)" }}>
+        <div
+          key={it.label}
+          style={{
+            display: "flex",
+            alignItems: "stretch",
+            gap: "var(--space-6)",
+          }}
+        >
           {i > 0 && (
             <span
               aria-hidden="true"
               style={{
                 width: 1,
-                background: inverse ? "rgba(255,255,255,0.3)" : "var(--border-default)",
+                background: inverse
+                  ? "rgba(255,255,255,0.3)"
+                  : "var(--border-default)",
               }}
             />
           )}
@@ -173,13 +204,20 @@ export function AdCard({
 }: {
   index: string;
   title: string;
-  href: string;
+  href?: string;
   children: React.ReactNode;
   media: React.ReactNode;
 }) {
-  return (
-    <a href={href} className="ad-card">
-      <div style={{ position: "relative", aspectRatio: "16/9", background: "var(--blue-100)", overflow: "hidden" }}>
+  const content = (
+    <>
+      <div
+        style={{
+          position: "relative",
+          aspectRatio: "16/9",
+          background: "var(--blue-100)",
+          overflow: "hidden",
+        }}
+      >
         {media}
         <span
           style={{
@@ -220,14 +258,29 @@ export function AdCard({
         >
           {children}
         </div>
-        <span
-          aria-hidden="true"
-          className="ad-card-arrow"
-          style={{ display: "inline-block", marginTop: "var(--space-3)", color: "var(--brand)", fontWeight: 700 }}
-        >
-          ↗
-        </span>
+        {href && (
+          <span
+            aria-hidden="true"
+            className="ad-card-arrow"
+            style={{
+              display: "inline-block",
+              marginTop: "var(--space-3)",
+              color: "var(--brand)",
+              fontWeight: 700,
+            }}
+          >
+            ↗
+          </span>
+        )}
       </div>
+    </>
+  );
+
+  return href ? (
+    <a href={href} className="ad-card">
+      {content}
     </a>
+  ) : (
+    <div className="ad-card">{content}</div>
   );
 }

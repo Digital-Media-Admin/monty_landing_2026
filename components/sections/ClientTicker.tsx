@@ -2,6 +2,7 @@
 
 import { motion } from "motion/react";
 import { Marquee } from "@/components/ui/marquee";
+import { SectionHeader, wrap } from "./shared";
 const logos = [
   {
     src: "https://fcmitvaaoqpj9xtr.public.blob.vercel-storage.com/logo%20%280%29.png",
@@ -40,18 +41,27 @@ const logos = [
 export default function ClientTicker() {
   return (
     <motion.div
+      style={{ paddingTop: "var(--space-6)" }}
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       viewport={{ once: true, amount: 0.2 }}
       transition={{ duration: 0.9, ease: "easeOut" }}
     >
+      <div>
+        <SectionHeader
+          title=" Align your brand with names your clients trust"
+          accent
+          small
+          center
+        />
+      </div>
       <Marquee className="[--duration:100s]">
         {logos.map((logo) => (
           <img
             key={logo.src}
             src={logo.src}
             alt={logo.alt}
-            className="mx-8 h-32 py-4 w-auto object-contain"
+            className="mx-8 h-30 py-4 w-auto object-contain"
           />
         ))}
       </Marquee>

@@ -4,10 +4,11 @@ import { motion, type Variants } from "motion/react";
 import { SectionHeader, StatRow, wrap } from "./shared";
 
 const resultStats = [
-  { value: "22K+", label: "Mailboxes every issue" },
-  { value: "6", label: "Towns covered" },
-  { value: "25+", label: "Years in print" },
-  { value: "92%", label: "Advertisers renew" },
+  { value: "100%", label: "Household Saturation via USPS" },
+  { value: "17,000", label: "Total monthly copies" },
+  { value: "15,000", label: "Homes reached by mail each month" },
+  { value: "6,000+", label: "Social media followers" },
+  { value: "52", label: "E-newsletters per year" },
 ];
 
 const containerVariants: Variants = {

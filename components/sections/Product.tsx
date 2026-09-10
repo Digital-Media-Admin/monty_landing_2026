@@ -1,7 +1,7 @@
 "use client";
 
 import { motion, type Variants } from "motion/react";
-import { AdCard, PlaceholderMedia, SectionHeader, wrap } from "./shared";
+import { AdCard, SectionHeader, wrap } from "./shared";
 
 const containerVariants: Variants = {
   hidden: {},
@@ -44,27 +44,35 @@ export function Product() {
             <AdCard
               index="01"
               title="Print display ads"
-              href="#rates"
               media={
-                <PlaceholderMedia
-                  gradient="linear-gradient(135deg,var(--blue-800),var(--blue-500))"
-                  label="Print ad placeholder"
+                <img
+                  src="https://fcmitvaaoqpj9xtr.public.blob.vercel-storage.com/full%20page.png"
+                  alt="Full-page print ad in The Montgomery News"
+                  style={{
+                    width: "100%",
+                    height: "100%",
+                    objectFit: "cover",
+                  }}
                 />
               }
             >
-              From an eighth-page to the back cover — designed for you at no
+              From an eighth-page to the back cover, designed by our teamat no
               extra cost.
             </AdCard>
           </motion.div>
           <motion.div variants={itemVariants}>
             <AdCard
               index="02"
-              title="Inserts & wraps"
-              href="#rates"
+              title="Inserts & Classifieds"
               media={
-                <PlaceholderMedia
-                  gradient="linear-gradient(135deg,var(--ink),var(--blue-700))"
-                  label="Insert photo placeholder"
+                <img
+                  src="https://fcmitvaaoqpj9xtr.public.blob.vercel-storage.com/insert.png"
+                  alt="Printed insert tucked inside The Montgomery News"
+                  style={{
+                    width: "100%",
+                    height: "100%",
+                    objectFit: "cover",
+                  }}
                 />
               }
             >
@@ -75,11 +83,16 @@ export function Product() {
             <AdCard
               index="03"
               title="Web & newsletter"
-              href="#rates"
               media={
-                <PlaceholderMedia
-                  gradient="linear-gradient(135deg,var(--blue-400),var(--blue-100))"
-                  label="Screenshot placeholder"
+                <img
+                  src="https://fcmitvaaoqpj9xtr.public.blob.vercel-storage.com/web.png"
+                  alt="TheMontyNews.com homepage with banner ad placements"
+                  style={{
+                    width: "100%",
+                    height: "100%",
+                    objectFit: "cover",
+                    objectPosition: "top",
+                  }}
                 />
               }
             >
