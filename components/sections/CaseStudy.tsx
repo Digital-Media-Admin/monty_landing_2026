@@ -23,6 +23,24 @@ const itemVariants: Variants = {
   visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeOut" } },
 };
 
+function Stars() {
+  return (
+    <div
+      role="img"
+      aria-label="5 out of 5 stars"
+      style={{
+        marginTop: "var(--space-3)",
+        color: "var(--white)",
+        fontSize: 14,
+        letterSpacing: 2,
+        lineHeight: 1,
+      }}
+    >
+      <span aria-hidden="true">★★★★★</span>
+    </div>
+  );
+}
+
 export function CaseStudy() {
   return (
     <section
@@ -77,6 +95,7 @@ export function CaseStudy() {
               “The sedation voucher on our back-page ad brought in 40 new
               patients in one season. Nothing else we run comes close.”
             </blockquote>
+            <Stars />
             <figcaption
               style={{
                 marginTop: "var(--space-4)",
@@ -87,7 +106,7 @@ export function CaseStudy() {
                 color: "var(--blue-200)",
               }}
             >
-              Dr. Al Internoscia — Towne Centre Family Dental
+              Dr. Al Internoscia @ Towne Centre Family Dental
             </figcaption>
           </motion.figure>
           <motion.figure variants={itemVariants} style={{ margin: 0 }}>
@@ -103,6 +122,7 @@ export function CaseStudy() {
               “We booked out our summer camp two months early. Everyone in town
               mentions they saw us in the Monty.”
             </blockquote>
+            <Stars />
             <figcaption
               style={{
                 marginTop: "var(--space-4)",
@@ -113,7 +133,7 @@ export function CaseStudy() {
                 color: "var(--blue-200)",
               }}
             >
-              Program director — Montgomery Summer Camps
+              Program director @ Montgomery Summer Camps
             </figcaption>
           </motion.figure>
         </div>
