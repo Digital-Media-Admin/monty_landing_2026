@@ -60,7 +60,7 @@ export function Footer() {
           >
             Get your business seen with our first-class print paper, delivered
             directly to every home in one of New Jersey&rsquo;s wealthiest
-            towns.{" "}
+            townships.
           </p>
         </div>
         <div>
