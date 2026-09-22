@@ -97,7 +97,7 @@ export function SectionHeader({
       {action && (
         <a
           href={actionHref}
-          className="ad-nav-link"
+          className="mn-nav-link"
           style={{
             display: "inline-flex",
             alignItems: "center",
@@ -260,7 +260,7 @@ export function AdCard({
         {href && (
           <span
             aria-hidden="true"
-            className="ad-card-arrow"
+            className="mn-card-arrow"
             style={{
               display: "inline-block",
               marginTop: "var(--space-3)",
@@ -276,10 +276,10 @@ export function AdCard({
   );
 
   return href ? (
-    <a href={href} className="ad-card">
+    <a href={href} className="mn-card">
       {content}
     </a>
   ) : (
-    <div className="ad-card">{content}</div>
+    <div className="mn-card">{content}</div>
   );
 }

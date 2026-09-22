@@ -278,7 +278,7 @@ export function Hero() {
           variants={itemVariants}
           style={{ display: "flex", gap: 16, margin: "28px 0 0" }}
         >
-          <a href="#contact" className="ad-btn ad-btn-lg ad-btn-primary">
+          <a href="#contact" className="mn-btn mn-btn-lg mn-btn-primary">
             Book a call <span aria-hidden="true">→</span>
           </a>
         </motion.div>

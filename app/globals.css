@@ -179,7 +179,7 @@ h4 {
 }
 
 /* Nav links */
-.ad-nav-link {
+.mn-nav-link {
   font-size: var(--text-label);
   font-weight: 700;
   text-transform: uppercase;
@@ -190,12 +190,12 @@ h4 {
   padding-bottom: 4px;
   transition: color var(--dur-fast) var(--ease-out);
 }
-.ad-nav-link:hover {
+.mn-nav-link:hover {
   color: var(--brand);
 }
 
 /* Buttons */
-.ad-btn {
+.mn-btn {
   display: inline-flex;
   align-items: center;
   gap: 10px;
@@ -211,52 +211,52 @@ h4 {
   transition: all var(--dur-fast) var(--ease-out);
   text-decoration: none;
 }
-.ad-btn-lg {
+.mn-btn-lg {
   padding: 16px 32px;
   font-size: 14px;
 }
-.ad-btn-md {
+.mn-btn-md {
   padding: 12px 24px;
   font-size: 13px;
 }
 @media (max-width: 767px) {
-  .ad-btn-lg {
+  .mn-btn-lg {
     padding: 13px 20px;
     font-size: 13px;
   }
-  .ad-btn-md {
+  .mn-btn-md {
     padding: 9px 13px;
     font-size: 12px;
   }
 }
-.ad-btn-primary {
+.mn-btn-primary {
   background: var(--brand);
   color: var(--text-on-brand);
 }
-.ad-btn-primary:hover {
+.mn-btn-primary:hover {
   background: var(--brand-hover);
 }
-.ad-btn-secondary {
+.mn-btn-secondary {
   background: transparent;
   color: var(--brand);
   border-color: var(--brand);
 }
-.ad-btn-secondary:hover {
+.mn-btn-secondary:hover {
   background: var(--blue-50);
 }
-.ad-btn-ghost {
+.mn-btn-ghost {
   background: transparent;
   color: var(--brand);
   border-color: transparent;
   padding: 0;
 }
-.ad-btn-ghost:hover {
+.mn-btn-ghost:hover {
   color: var(--brand-hover);
   text-decoration: underline;
 }
 
 /* Cards */
-.ad-card {
+.mn-card {
   display: block;
   background: var(--surface-card);
   border: var(--rule-hairline);
@@ -266,19 +266,19 @@ h4 {
   box-shadow: var(--shadow-card);
   transition: all var(--dur-med) var(--ease-out);
 }
-.ad-card:hover {
+.mn-card:hover {
   box-shadow: var(--shadow-pop);
   transform: translateY(-2px);
 }
-.ad-card:hover .ad-card-arrow {
+.mn-card:hover .mn-card-arrow {
   transform: translateX(3px);
 }
-.ad-card-arrow {
+.mn-card-arrow {
   transition: transform var(--dur-fast) var(--ease-out);
 }
 
 /* Form fields */
-.ad-field {
+.mn-field {
   display: block;
   width: 100%;
   box-sizing: border-box;
@@ -292,13 +292,13 @@ h4 {
   outline: none;
   transition: border-color var(--dur-fast) var(--ease-out);
 }
-.ad-field:focus {
+.mn-field:focus {
   border-color: var(--brand);
   box-shadow: var(--focus-ring);
 }
 
 /* Icon buttons (footer social) */
-.ad-icon-btn {
+.mn-icon-btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -312,7 +312,7 @@ h4 {
   text-decoration: none;
   transition: background var(--dur-fast) var(--ease-out);
 }
-.ad-icon-btn:hover {
+.mn-icon-btn:hover {
   background: var(--off-white);
 }
 

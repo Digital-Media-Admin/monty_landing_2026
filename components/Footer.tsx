@@ -117,7 +117,7 @@ export function Footer() {
           </div>
           <div style={{ display: "flex", gap: "var(--space-2)" }}>
             <a
-              className="ad-icon-btn"
+              className="mn-icon-btn"
               href="https://www.linkedin.com/company/the-montgomery-news"
               target="_blank"
               rel="noopener noreferrer"
@@ -136,7 +136,7 @@ export function Footer() {
               </svg>
             </a>
             <a
-              className="ad-icon-btn"
+              className="mn-icon-btn"
               href="https://www.facebook.com/themontynews.org/"
               target="_blank"
               rel="noopener noreferrer"
@@ -154,7 +154,7 @@ export function Footer() {
               </svg>
             </a>
             <a
-              className="ad-icon-btn"
+              className="mn-icon-btn"
               href="https://www.instagram.com/themontynews/"
               target="_blank"
               rel="noopener noreferrer"

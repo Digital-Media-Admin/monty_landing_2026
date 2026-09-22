@@ -53,7 +53,7 @@ export function ContactForm() {
           </p>
           <button
             type="button"
-            className="ad-btn ad-btn-ghost"
+            className="mn-btn mn-btn-ghost"
             onClick={() => setSent(false)}
           >
             Send another
@@ -82,7 +82,7 @@ export function ContactForm() {
               Business name
             </span>
             <input
-              className="ad-field"
+              className="mn-field"
               type="text"
               placeholder="Your Business Name"
               required
@@ -103,7 +103,7 @@ export function ContactForm() {
               Phone Number
             </span>
             <input
-              className="ad-field"
+              className="mn-field"
               type="text"
               placeholder="(908) 555-0122"
               required
@@ -125,7 +125,7 @@ export function ContactForm() {
             </span>
             <span style={{ position: "relative", display: "block" }}>
               <select
-                className="ad-field"
+                className="mn-field"
                 defaultValue=""
                 required
                 style={{
@@ -162,7 +162,7 @@ export function ContactForm() {
           </label>
           <button
             type="submit"
-            className="ad-btn ad-btn-lg ad-btn-primary"
+            className="mn-btn mn-btn-lg mn-btn-primary"
             style={{ width: "100%", justifyContent: "center" }}
           >
             Book a call <span aria-hidden="true">→</span>
