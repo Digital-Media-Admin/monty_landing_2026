@@ -46,7 +46,7 @@ export function Footer() {
               lineHeight: 1.2,
             }}
           >
-            Be seen
+            Get Placement
             <br />
             <span style={{ color: "var(--blue-300)" }}>in every mailbox</span>
           </h2>
