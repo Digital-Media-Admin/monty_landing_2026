@@ -270,9 +270,9 @@ export function Hero() {
             margin: "22px 0 0",
           }}
         >
-          Get your business past the front door onto every kitchen table with
-          our first-class print paper, delivered directly to every home in one
-          of New Jersey&rsquo;s wealthiest townships.
+          Get your business past the front door and onto every kitchen table
+          with our first-class print paper, delivered directly to every home in
+          one of New Jersey&rsquo;s wealthiest townships.
         </motion.p>
         <motion.div
           variants={itemVariants}
