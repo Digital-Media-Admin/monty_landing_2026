@@ -268,7 +268,7 @@ export function AdCard({
               fontWeight: 700,
             }}
           >
-            ↗
+            ↗︎
           </span>
         )}
       </div>

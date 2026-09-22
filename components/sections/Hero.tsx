@@ -244,7 +244,6 @@ export function Hero() {
           }}
         >
           Placement in Every Montgomery Mailbox{" "}
-          <span aria-hidden="true">↗</span>
         </motion.div>
         <motion.h1
           variants={itemVariants}
